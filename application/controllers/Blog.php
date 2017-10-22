@@ -5,12 +5,12 @@ class Blog extends CI_Controller {
 	
 	function __construct(){
 		parent::__construct();
-		$this->load->model('m_data');
+		$this->load->model('M_data');
 				$this->load->helper('url');
 	}
 	public function post(){
 		$key = $this->uri->segment(3);
-		$d['data'] = $this->m_data->list_posting($key);
+		$d['data'] = $this->M_data->list_posting($key);
 		$d['page'] = 'Blog';
 		
 		$this->load->view('post', $d);

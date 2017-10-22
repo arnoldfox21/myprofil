@@ -5,7 +5,7 @@ class Page extends CI_Controller {
 	
 	function __construct(){
 		parent::__construct();
-		$this->load->model('m_data');
+		$this->load->model('M_data');
 				$this->load->helper('url');
 	}
 		public function work(){
@@ -13,6 +13,7 @@ class Page extends CI_Controller {
 		$this->load->view('work', $var);
 	}
 		public function blog(){
+		$var['data'] = $this->M_data->get_blogpost()->result();
 		$var['page'] = 'Blog';
 		$this->load->view('blog', $var);
 	}
