@@ -5,11 +5,13 @@ class Login extends CI_Controller{
 	function __construct(){
 		parent::__construct();		
 		$this->load->model('m_login');
+		if($this->session->userdata('umail')!=''){
+			redirect(base_url('admin'));
+		}
 
 	}
 
 	function index(){
-	
 		$f['page'] = 'Login';	
 		$this->load->view('v_login', $f);
 	}
@@ -29,7 +31,7 @@ class Login extends CI_Controller{
 				'status' => 'login'
 				);
 			$this->session->set_userdata($data_session);
-			redirect(base_url("admin"));
+			echo "ok";
 
 		}else{
 			echo "Username dan password salah !";

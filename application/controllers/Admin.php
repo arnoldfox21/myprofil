@@ -17,6 +17,7 @@ class Admin extends CI_Controller{
 		$this->load->view('v_admin', $a);
 	}
 	function post(){
-		$this->load->view('v_post');
+		$a['page'] = 'Blog';
+		$this->load->view('v_post', $a);
 	}
 }

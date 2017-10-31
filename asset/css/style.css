@@ -334,7 +334,6 @@ input:not([type=submit]):not([type=file]):focus, select:focus, textarea:focus {
 	border: none;
 	margin-bottom: 0;
 	margin-top: 24px;
-	display: none;
 	font-size: 15px;
 	line-height: 26px;
 	border-radius: 3px;
@@ -858,21 +857,20 @@ input:not([type=submit]):not([type=file]):focus, select:focus, textarea:focus {
 .footer h4 {
 	color: #fff;
 }
-.footer .social-icons {
+.footer .social-iconsx {
 	margin-bottom: 24px;
 }
 
 /* ==========================================================================
    08. Social Icons
    ========================================================================== */
-.social-icon {
+.social-iconx {
 	display: inline-block;
 	width: 42px;
 	height: 42px;
 	line-height: 42px;
 	font-size: 16px;
-	color: #232323;
-	background: #fff;
+	color: #ffffff;
 	border-radius: 100%;
 	box-shadow: 0 4px 12px rgba(0,0,0,.13);
 	margin: 0 4px;
@@ -881,7 +879,7 @@ input:not([type=submit]):not([type=file]):focus, select:focus, textarea:focus {
 .social-icon:hover {
 	box-shadow: 0 4px 12px rgba(0,0,0,.13), 0 6px 10px rgba(0,0,0,.3);
 }
-.footer .social-icon {
+.footer .social-iconx {
 	box-shadow: 0 4px 12px rgba(0,0,0,.13), 0 6px 10px rgba(0,0,0,.3);
 }
 .social-icon:hover {
@@ -1688,9 +1686,9 @@ input:not([type=submit]):not([type=file]):focus, select:focus, textarea:focus {
 	padding: 15px;
 }
 .blog-posts.masonry .blog-post.image-left {
-	width: 50%;
+	width: 100%;
 }
-.blog-posts.masonry .blog-post.image-right {
+.blog-posts.masonry .blog-post.image-righst {
 	width: 50%;
 }
 .blog-posts.masonry .blog-post .inner {
@@ -1913,7 +1911,7 @@ input:not([type=submit]):not([type=file]):focus, select:focus, textarea:focus {
 	margin-bottom: 12px;
 	display: inline-block;
 }
-.single-blog-post .blog-details .social-icons {
+.single-blog-post .blog-details .social-iconsx {
 	margin-top: 24px;
 }
 .single-blog-post .blog-details .tags {

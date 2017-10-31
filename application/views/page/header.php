@@ -12,18 +12,12 @@
 
 
 		<link rel="icon" href="<?php echo base_url() ?>asset/images/logo4.png">
-		<!-- Bootstrap -->
 		<link href="<?php echo base_url() ?>asset/css/bootstrap.min.css" rel="stylesheet">
-		<!-- Material Design Icons -->
 		<link href="<?php echo base_url() ?>asset/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css" rel="stylesheet">
-		<!-- Font Awesome -->
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-		<!-- Ionicons -->
 		<link href="<?php echo base_url() ?>asset/fonts/ionicons/css/ionicons.min.css" rel="stylesheet">
-		<!-- Owl Carousel -->
 		<link href="<?php echo base_url() ?>asset/css/owl.carousel.css" rel="stylesheet">
 		<link href="<?php echo base_url() ?>asset/css/owl.theme.default.css" rel="stylesheet">
-		<!-- Style.css -->
 		<link href="<?php echo base_url() ?>asset/css/style.css" rel="stylesheet">
 
 		
@@ -32,7 +26,7 @@
 	<body>
 
 		
-		<!-- Slide Out -->
+		
 		<div class="slide-out-overlay"></div>
 		<div class="slide-out">
 			<header class="slide-out-header clearfix">
@@ -81,7 +75,7 @@
 								<button type="submit" class="button solid-button purple">Send Message</button>
 							</div> <!-- end .col-sm-9 -->
 						</div> <!-- end .form-group -->
-						<div class="contact-loading alert alert-info form-alert">
+						<!-- <div class="contact-loading alert alert-info form-alert">
 							<span class="message">Loading...</span>
 							<button type="button" class="close" data-hide="alert" aria-label="Close"><i class="fa fa-times"></i></button>
 						</div>
@@ -92,7 +86,7 @@
 						<div class="contact-error alert alert-danger form-alert">
 							<span class="message">Error!</span>
 							<button type="button" class="close" data-hide="alert" aria-label="Close"><i class="fa fa-times"></i></button>
-						</div>
+						</div> -->
 					</form> <!-- end contact-form -->
 				</div> <!-- end .slide-out-widget -->
 				<div class="slide-out-widget">
@@ -121,7 +115,7 @@
 				
 			</div> <!-- end .top -->
 			<div class="bottom clearfix">
-				<div class="title"><a href="<?php echo base_url() ?>"><?php echo $page; ?></a></div>
+				<div class="title"><?php echo $page; ?></div>
 				<div class="header-action-button-wrapper">
 					<a href="#" class="header-action-button action-button"><i class="md md-add"></i></a>
 				</div> <!-- end .header-action-button-wrapper -->

@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Kurniawan | <?php echo $title; ?></title>
+		<title>Admin | <?php echo $page; ?></title>
 
 
 
@@ -54,16 +54,7 @@
 					<a href="#" class="download"><i class="md md-file-download"></i></a>
 					<a href="#" class="share"><i class="md md-more-vert"></i></a>
 				</div> <!-- end .right-icons -->
-				<!-- Popup -->
-				<div class="popup">
-					<nav class="social-nav">
-						<ul class="list-unstyled">
-							<li><a href="#">Profil</a></li>
-							<li><a href="#">Setting</a></li>
-							<li><a href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
-						</ul> <!-- end .list-unstyled -->
-					</nav> <!-- end .social-nav -->
-				</div> <!-- end .popup -->
+			
 			</div> <!-- end .top -->
 			<div class="bottom clearfix">
 				<div class="title"><a href="<?php echo base_url() ?>">Developer</a></div>
@@ -73,7 +64,8 @@
 					<ul class="list-unstyled">
 						<li><a href="<?php echo base_url() ?>">Home</a></li>
 						<li <?php if($page == 'admin'){ echo 'class="active"'; } ?>><a href="<?php echo base_url('admin') ?>">Admin</a></li>
-						<li <?php if($page == 'post'){ echo 'class="active"'; } ?>><a href="<?php echo base_url('admin/post') ?>">Post</a></li>
+						<li <?php if($page == 'Blog'){ echo 'class="active"'; } ?>><a href="<?php echo base_url('admin/post') ?>">Blog</a></li>
+						<li><a href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
 					</ul>
 				</nav> <!-- end .main-nav -->
 			</div> <!-- end .bottom -->

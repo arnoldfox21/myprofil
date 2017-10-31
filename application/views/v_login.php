@@ -7,17 +7,28 @@ include_once('page/header.php'); ?>
         <div class="row">
             <div class="col-md-6">
               <div class="center-block" style="margin-top: 60px; margin-bottom: 60px">
-                <form action="<?php echo base_url('login/aksi_login'); ?>" method="post">
+                  <div id="error">
+          <!-- error will be shown here ! -->
+                   </div>
+                <form class="form-horizontal" id="login-form" method="post">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                  </div>
+                    <label class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="contact-email" id="email" name="email" />
+                    </div> 
+                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div> 
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                    <label class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="contact-email" id="password" name="password" />
+                    </div> 
+                  </div> 
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                      <button type="submit" id="btn-login" class="button solid-button purple">Login</button>
+                    </div> 
+                  </div> 
                 </form>
               </div>
         </div>

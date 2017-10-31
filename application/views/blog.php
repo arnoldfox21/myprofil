@@ -8,13 +8,11 @@
 				<div class="sections-wrapper clearfix">
 
 					<section>
-
 						<div class="blog-posts masonry" id="blog-masonry">
 							<div class="blog-grid-sizer"></div>
-							
+							<div class="row">
 							<?php foreach($data as $data){ ?>
-
-
+							<div class="col-md-6">
 							<div class="blog-post image-left">
 								<div class="inner">
 									<a href="<?php echo base_url() ?>blog/post/<?php echo $data->id; ?>"><div class="image" style="background-image: url('<?php echo base_url() ?>asset/<?php echo $data->cover1; ?>');"></div></a>
@@ -28,12 +26,12 @@
 									</div> <!-- end .content -->
 								</div> <!-- end .inner -->
 							</div> <!-- end .blog-post -->
-							
+							</div>
 							<?php } ?>
-
+						</div>
 						<!-- <div class="blog-load-more">
 							<a href="#" class="button solid-button white icon-right">Load More Posts<i class="md-refresh"></i></a>
-						</div> <!-- end .blog-load-more --> -->
+						</div>   -->
 					
 				</section>
 			</div>

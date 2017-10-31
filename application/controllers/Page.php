@@ -6,6 +6,7 @@ class Page extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('M_data');
+		$this->load->model('Balok');
 				$this->load->helper('url');
 	}
 		public function work(){
@@ -21,6 +22,11 @@ class Page extends CI_Controller {
 		$key['page'] = 'Contact';
 		$key['data'] = $this->uri->segment(3);
 		$this->load->view('contact', $key);
+	}
+		public function bingo(){
+		$g['data'] = $this->Balok->tampil()->result();
+		$this->load->view('bingo', $g);
+
 	}
 
 }

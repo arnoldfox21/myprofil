@@ -21,6 +21,24 @@ class M_data extends CI_Model{
 		$get = $set->row();
 		return $get;
         }
+    function where_table($table,$field,$where_key)
+	{
+       return $this->db->get_Where($table, array($field=>$where_key));
+
+        }
+    function select_order($table,$order_by,$da){
+   			   $this->db->select('*');
+    		   $this->db->from($table);
+          	   $this->db->order_by($order_by,$da);
+        return $this->db->get(); 
+    }
+    function last_row(){
+    	  	   $this->db->select('*');
+    		   $this->db->from('blog');
+          	   $this->db->order_by('id','DESC');
+          	   $this->db->limit(1);
+        return $this->db->get(); 
+    }
 	function input_data($data,$table){
 		$this->db->insert($table,$data);
 	}

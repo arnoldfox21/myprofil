@@ -1,13 +1,52 @@
+
+
+	function myFuckcomment() {
+			
+			document.getElementById("delta").classList.remove('hidden');
+			document.getElementById("submit").attr('disabled','disabled');
+			var name = document.getElementById("nama").value;
+			var email = document.getElementById("mail").value;
+			var pesan = document.getElementById("comment_id").value;
+			var comit = document.getElementById("comit").value;
+			var pid = document.getElementById("pid").value;
+
+			var dataString = {'name1': name, 'email1': email, 'pesan1': pesan, 'comit1': comit, 'pid1': pid };
+			
+				$.ajax({
+				type: "POST",
+				url: "http://[::1]/kurniawan/crud/tambah_komentar",
+				data: dataString,
+				success: function(data) {
+					if(data == 'sukses'){
+						document.getElementById("alpha").classList.remove('hidden');
+						document.getElementById("delta").classList.add('hidden');
+					}else{
+						document.getElementById("beta").classList.remove('hidden');	
+						document.getElementById("delta").classList.add('hidden');
+					}
+					 alert(data);
+					}
+				});
+
+			
+			return false;
+		}
+
+
 (function ($) {
 	"use strict";
 
-	// Page Loaded...
-	$(document).ready(function () {
 
-		/*==========  Tooltip  ==========*/
+	$(document).ready(function () {
+		$('#wtf').on('show.bs.modal', function (event) {
+		  var button = $(event.relatedTarget) 
+		  var recipient = button.data('whatever') 
+		  var modal = $(this)
+		  modal.find('.modal-title').text('New message to ' + recipient)
+		  modal.find('.modal-body input').val(recipient)
+		})
+
 		$('.tool-tip').tooltip();
-		
-		/*==========  Progress Bars  ==========*/
 		$('.progress-bar').on('inview', function (event, isInView) {
 			if (isInView) {
 				$(this).css('width',  function() {
@@ -240,52 +279,39 @@
 			return true;
 		}
 	}
-	
-	/*==========  Contact Form  ==========*/
-	// $('.contact-form').on('submit', function() {
-	// 	var contactForm = $(this);
-	// 	contactForm.find('.contact-error').fadeOut();
-	// 	contactForm.find('.contact-success').fadeOut();
-	// 	contactForm.find('.contact-loading').fadeOut();
-	// 	contactForm.find('.contact-loading').fadeIn();
-	// 	if (validateEmail(contactForm.find('.contact-email').val()) && contactForm.find('.contact-email').val().length !== 0 && contactForm.find('.contact-name').val().length !== 0 && contactForm.find('.contact-message').val().length !== 0) {
-	// 		var action = contactForm.attr('action');
-	// 		$.ajax({
-	// 			type: "POST",
-	// 			url : action,
-	// 			data: {
-	// 				contact_name: contactForm.find('.contact-name').val(),
-	// 				contact_email: contactForm.find('.contact-email').val(),
-	// 				contact_message: contactForm.find('.contact-message').val()
-	// 			},
-	// 			success: function() {
-	// 				contactForm.find('.contact-loading').fadeOut();
-	// 				contactForm.find('.contact-success').find('.message').html('Success! Thanks for contacting us!');
-	// 				contactForm.find('.contact-success').fadeIn();
-	// 			},
-	// 			error: function() {
-	// 				contactForm.find('.contact-loading').fadeOut();
-	// 				contactForm.find('.contact-error').find('.message').html('Sorry, an error occurred.');
-	// 				contactForm.find('.contact-error').fadeIn();
-	// 			}
-	// 		});
-	// 	} else if (!validateEmail(contactForm.find('.contact-email').val()) && contactForm.find('.contact-email').val().length !== 0 && contactForm.find('.contact-name').val().length !== 0 && contactForm.find('.contact-message').val().length !== 0) {
-	// 		contactForm.find('.contact-error').fadeOut();
-	// 		contactForm.find('.contact-success').fadeOut();
-	// 		contactForm.find('.contact-loading').fadeOut();
-	// 		contactForm.find('.contact-error').find('.message').html('Please enter a valid email.');
-	// 		contactForm.find('.contact-error').fadeIn();
-	// 	} else {
-	// 		contactForm.find('.contact-error').fadeOut();
-	// 		contactForm.find('.contact-success').fadeOut();
-	// 		contactForm.find('.contact-loading').fadeOut();
-	// 		contactForm.find('.contact-error').find('.message').html('Please fill out all the fields.');
-	// 		contactForm.find('.contact-error').fadeIn();
-	// 	}
-	// 	return false;
-	// });
-
-	/*==========  Map  ==========*/
+	 /* login submit */
+	  $("#login-form").validate({
+	 submitHandler: submitForm
+	});
+	   function submitForm() {		
+			var data = $("#login-form").serialize();
+			$.ajax({	
+			type : 'POST',
+			url  : '<?php echo base_url("login/aksi_login"); ?>',
+			data : data,
+			beforeSend: function() {	
+				$("#error").fadeOut();
+				$("#btn-login").html('<span class="glyphicon glyphicon-transfer"></span> &nbsp; kirimkan ...');
+			},
+			success :  function(response)
+			   {						
+					if(response=="ok"){
+									
+						$("#btn-login").html('<img src="btn-ajax-loader.gif" /> &nbsp; Masuk ...');
+						setTimeout(' window.location.href = "home.php"; ',4000);
+					}
+					else{
+									
+						$("#error").fadeIn(1000, function(){						
+				$("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; '+response+' !</div>');
+$("#btn-login").html('<span class="glyphicon glyphicon-log-in"></span> &nbsp; Masuk');
+									});
+					}
+			  }
+			});
+				return false;
+		}
+	   /* login submit */
 	var map;
 	function initialize_map() {
 		if ($('.map').length) {

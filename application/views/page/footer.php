@@ -11,10 +11,10 @@
 						</div> 
 						<div class="col-sm-4">
 							<h4>Connect</h4>
-							<div class="social-icons">
-								<a href="http://facebook.com/arnold.andreastandholi" class="social-icon"><i class="fa fa-facebook"></i></a>
-								<a href="http://twitter.com/arnold21" class="social-icon"><i class="fa fa-twitter"></i></a>
-								<a href="https://plus.google.com/u/1/113620116470095130953" class="social-icon"><i class="fa fa-google-plus"></i></a>
+							<div class="social-iconsx">
+								<a href="http://facebook.com/arnold.andreastandholic" class="social-iconx"><i class="fa fa-facebook"></i></a>
+								<a href="http://twitter.com/arnold21" class="social-iconx"><i class="fa fa-twitter"></i></a>
+								<a href="https://plus.google.com/u/1/113620116470095130953" class="social-iconx"><i class="fa fa-google-plus"></i></a>
 							</div> 
 						</div>
 						<div class="col-sm-4">
@@ -29,13 +29,7 @@
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<script src="<?php echo base_url() ?>asset/js/jquery-1.11.2.min.js"></script>
 		<script src="<?php echo base_url() ?>asset/js/bootstrap.min.js"></script>
-		<script src="<?php echo base_url() ?>asset/js/jquery.inview.min.js"></script>
-		<script src="<?php echo base_url() ?>asset/js/smoothscroll.js"></script>
-		
-		<script src="<?php echo base_url() ?>asset/js/owl.carousel.min.js"></script>
-		<script src="<?php echo base_url() ?>asset/js/isotope.pkgd.min.js"></script>
 		<script src="<?php echo base_url() ?>asset/js/imagesloaded.pkgd.min.js"></script>
-		
 		<script src="<?php echo base_url() ?>asset/js/scripts.js"></script>
 		
 
