@@ -30,20 +30,55 @@
 
 	</head>
 	<body>
-
-		<!-- Search -->
-		<div class="search-overlay"></div>
-		<div class="search">
-			<a href="#" class="search-close"><i class="md md-close"></i></a>
-			<div class="row">
-				<div class="col-sm-6 col-sm-offset-3">
-					<h4>Just Start Typing Text and Press Enter</h4>
-					<form class="search-form">
-						<input type="text" id="search" name="search" class="text-center" />
-					</form> <!-- end .search-form -->
-				</div> <!-- end .col-sm-6 -->
-			</div> <!-- end .row -->
-		</div> <!-- end .row -->
+	<div class="slide-out-overlay"></div>
+		<div class="slide-out">
+			<header class="slide-out-header clearfix">
+				<div class="image"><img src="<?php echo base_url() ?>asset/images/head01.png" alt="alt text" class="img-responsive"></div>
+				<div class="content">
+					<h5><?php echo $data->uname; ?></h5>
+					<span>Welcome</span>
+				</div> <!-- end .content -->
+				
+			</header> <!-- end .slide-out-header -->
+			<div class="slide-out-widgets">
+				<div class="slide-out-widget">
+			                    <ul class="nav ">
+			                        <li class="nav-header">Blog</li>
+			                        <li class="active"><a href="<?php echo base_url('admin/post'); ?>">New post</a>
+			                        </li>
+			                        <li><a href="#">Categories</a>
+			                        </li>
+			                        <li><a href="#">Post</a>
+			                        </li>
+			                        <li><a href="#">Tag seo</a>
+			                        </li>
+			                        <li class="nav-header">Contact</li>
+			                        <li><a href="#">New message</a>
+			                        </li>
+			                        <li><a href="#">Inbox</a>
+			                        </li>
+			                        <li><a href="#">Draft</a>
+			                        </li>
+			                        <li><a href="#">sent</a>
+			                        </li>
+			                        <li><a href="#">Link</a>
+			                        </li>
+			                        <li><a href="#">Link</a>
+			                        </li>
+			                        <li class="nav-header">Media</li>
+			                        <li><a href="#">Image</a>
+			                        </li>
+			                        <li><a href="#">File</a>
+			                        </li>
+			                        <li><a href="#">Video</a>
+			                        </li>
+			                    </ul>
+			               
+			 
+				</div> <!-- end .slide-out-widget -->
+		
+			</div> <!-- end .slide-out-widgets -->
+		</div> <!-- end .slide-out -->
 
 		<!-- Header -->
 		<header class="header">
@@ -58,7 +93,9 @@
 			</div> <!-- end .top -->
 			<div class="bottom clearfix">
 				<div class="title"><a href="<?php echo base_url() ?>">Developer</a></div>
-				
+				<div class="header-action-button-wrapper">
+					<a href="#" class="header-action-button action-button"><i class="ion-navicon-round"></i></a>
+				</div> <!-- end .header-action-button-wrapper -->
 				<a href="#" class="responsive-menu-open">Menu <i class="fa fa-bars"></i></a>
 				<nav class="main-nav">
 					<ul class="list-unstyled">

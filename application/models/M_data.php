@@ -1,23 +1,27 @@
 <?php
 class M_data extends CI_Model{
 	
-	function tampil_data(){
+	function tampil_data($ob,$limit){
+           $this->db->order_by($ob);
+           $this->db->limit($limit);
 		return $this->db->get('contact');
 	}
 
-	function get_blogpost(){
+	function get_blogpost($ob,$limit){
+           $this->db->order_by($ob);
+           $this->db->limit($limit);
 		return $this->db->get('blog');
 	}
 
 	function list_posting($key)
 	{
-        $query = $this->db->query("select * from blog where id = $key");
+    $query = $this->db->query("select * from blog where id = $key");
 		$row = $query->row();
 		return $row;
         }
     function admin($key)
 	{
-        $set = $this->db->query("select * from admin where mail = '$key'");
+    $set = $this->db->query("select * from admin where mail = '$key'");
 		$get = $set->row();
 		return $get;
         }

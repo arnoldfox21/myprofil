@@ -33,7 +33,7 @@
 				<div class="clearfix">
 					<a href="#" class="slide-out-close pull-left"></i></a>
 					<a href="<?php echo base_url('login') ?>" class="open-search pull-right"><i class="ion-log-in"></i></a>
-					<a href="#" class="slide-out-share pull-right"><i class="md md-more-vert"></i></a>
+					
 				</div> <!-- end .clearfix -->
 				
 				<div class="image"><img src="<?php echo base_url() ?>asset/images/head01.png" alt="alt text" class="img-responsive"></div>
@@ -110,7 +110,6 @@
 				<div class="right-icons">
 					<a href="<?php echo base_url('login') ?>" class="open-search header-open-search"><i class="ion-log-in"></i></a>
 					
-					<a href="#" class="share"><i class="md md-more-vert"></i></a>
 				</div> <!-- end .right-icons -->
 				
 			</div> <!-- end .top -->

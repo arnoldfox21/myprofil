@@ -5,7 +5,7 @@ $title = 'Admin';
 
 	<div class="container">
 			
-			<h1>Hai, <?php echo $data->uname; ?></h1>
+			<h1>Welcome back, Mr. <?php echo $data->uname; ?></h1>
 			
 		<div class="row white">
 			<div class="col-md-6">
@@ -35,39 +35,32 @@ $title = 'Admin';
 				  <div class="center"><a href="#" class="button btn-solid">View all message</a></div>			
 			</div>
 			<div class="col-md-6">
-				<div class="text-center"><h3>Portofolio</h3></div>
+				<div class="text-center"><h3>Blog</h3></div>
 				<table class="table table-striped table-inverse">
 				  <thead>
 				    <tr>
-				      <th>#</th>
-				      <th>First Name</th>
-				      <th>Last Name</th>
-				      <th>Username</th>
+				      <th>id</th>
+				      <th>Judul</th>
+				     
+				      <th>Categories</th>
 				    </tr>
 				  </thead>
 				  <tbody>
+			  	 <?php foreach($blog as $blog){ ?>
 				    <tr>
-				      <th scope="row">1</th>
-				      <td>Mark</td>
-				      <td>Otto</td>
-				      <td>@mdo</td>
+				      <th scope="row"><?php echo $blog->id; ?></th>
+				      <td><?php echo $blog->judul; ?></td>
+				    
+				      <td><?php echo $blog->categories; ?></td>
 				    </tr>
-				    <tr>
-				      <th scope="row">2</th>
-				      <td>Jacob</td>
-				      <td>Thornton</td>
-				      <td>@fat</td>
-				    </tr>
-				    <tr>
-				      <th scope="row">3</th>
-				      <td>Larry</td>
-				      <td>the Bird</td>
-				      <td>@twitter</td>
-				    </tr>
+				   <?php } ?>
 				  </tbody>
-				</table>				
+				</table>	
+				 <div class="center"><a href="#" class="button btn-solid">View all post</a></div>			
 			</div>
+
 			<div class="col-md-12">
+				<div style="height: 30px"></div>
 				<div class="text-center"><h3>Mail Contact</h3></div>
 				<table class="table table-striped table-inverse">
 				  <thead>

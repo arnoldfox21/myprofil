@@ -31,8 +31,7 @@ class Login extends CI_Controller{
 				'status' => 'login'
 				);
 			$this->session->set_userdata($data_session);
-			echo "ok";
-
+			redirect(base_url('admin'));
 		}else{
 			echo "Username dan password salah !";
 		}

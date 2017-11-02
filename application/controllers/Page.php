@@ -14,7 +14,7 @@ class Page extends CI_Controller {
 		$this->load->view('work', $var);
 	}
 		public function blog(){
-		$var['data'] = $this->M_data->get_blogpost()->result();
+		$var['data'] = $this->M_data->get_blogpost('id desc', 0)->result();
 		$var['page'] = 'Blog';
 		$this->load->view('blog', $var);
 	}

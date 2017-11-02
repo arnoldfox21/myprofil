@@ -10,7 +10,7 @@ include_once('page/header.php'); ?>
                   <div id="error">
           <!-- error will be shown here ! -->
                    </div>
-                <form class="form-horizontal" id="login-form" method="post">
+                <form class="form-horizontal" action="<?php echo base_url("login/aksi_login"); ?>" method="post">
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Email</label>
                     <div class="col-sm-10">
